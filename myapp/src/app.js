@@ -287,7 +287,7 @@ async function getPokemonLite(arg) {
 function showFavorites() {
   let arr = LS.get("arr_fav_pokemon") ?? [];
   let isFav = arr.some(({ num_id }) => num_id == CUR.num_id_pokemon);
-  btnFAV.innerHTML = `<img class="size-6 md:size-8" src="/save${ isFav ? "-fill" : "" }.png" alt="Favorite">`;
+  btnFAV.innerHTML = `<img class="size-6 md:size-8" src="/img/save${ isFav ? "-fill" : "" }.png" alt="Favorite">`;
   entFav.innerHTML = "";
   for (const e of arr) {
     let p = document.createElement("p");
